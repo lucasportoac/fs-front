@@ -33,8 +33,12 @@ const cartSlice = createSlice({
         state.produtos.splice(index, 1);
       }
     },
+
+    limparCarrinho: (state) => {
+      state.produtos = [];
+    },
   },
 });
 
-export const { adicionarProduto, removerProduto } = cartSlice.actions;
+export const { adicionarProduto, removerProduto, limparCarrinho } = cartSlice.actions;
 export default cartSlice.reducer;
